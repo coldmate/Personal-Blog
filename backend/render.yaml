@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: blog-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: AUTH0_DOMAIN
+        sync: false
+      - key: AUTH0_AUDIENCE
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
